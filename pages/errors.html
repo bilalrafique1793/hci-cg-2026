@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Errors</title>
+  <style>
+    body { font-family: Arial; font-size: 16px; color: black; background-color: white; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Common HTML Errors (Wrong vs Correct)</h1>
+</header>
+
+<nav aria-label="Primary navigation">
+  <ul>
+    <li><a href="week1.html">Week 1</a></li>
+    <li><a href="week2.html">Week 2</a></li>
+    <li><a href="week3.html">Week 3</a></li>
+    <li><a href="week4.html">Week 4</a></li>
+    <li><a href="errors.html" aria-current="page">HTML Errors</a></li>
+    <li><a href="references.html">References</a></li>
+  </ul>
+</nav>
+
+<main>
+<section>
+<h2>Identify and Fix Common HTML Mistakes</h2>
+
+<table>
+<caption>Common Semantic and Accessibility Errors with Corrections</caption>
+
+<thead>
+<tr>
+<th scope="col">Issue</th>
+<th scope="col">Wrong Code</th>
+<th scope="col">Correct Code</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<th scope="row">Navigation without list items</th>
+<td>
+&lt;nav&gt;<br>
+&lt;ul&gt;<br>
+&lt;a href="week1.html"&gt;Week1&lt;/a&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;
+</td>
+<td>
+&lt;nav&gt;<br>
+&lt;ul&gt;<br>
+&lt;li&gt;&lt;a href="week1.html"&gt;Week1&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+&lt;/nav&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Label not associated with input</th>
+<td>
+&lt;label for="msg"&gt;Message&lt;/label&gt;<br>
+&lt;textarea id="message"&gt;&lt;/textarea&gt;
+</td>
+<td>
+&lt;label for="message"&gt;Message&lt;/label&gt;<br>
+&lt;textarea id="message"&gt;&lt;/textarea&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Skipping heading level</th>
+<td>
+&lt;h1&gt;Models&lt;/h1&gt;<br>
+&lt;h3&gt;KLM&lt;/h3&gt;
+</td>
+<td>
+&lt;h1&gt;Models&lt;/h1&gt;<br>
+&lt;h2&gt;KLM&lt;/h2&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Image without alt text</th>
+<td>
+&lt;img src="diagram.png"&gt;
+</td>
+<td>
+&lt;img src="diagram.png" alt="Diagram of interaction model"&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Table without caption</th>
+<td>
+&lt;table&gt;<br>
+&lt;tr&gt;&lt;td&gt;KLM&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;
+</td>
+<td>
+&lt;table&gt;<br>
+&lt;caption&gt;Comparison of interaction models&lt;/caption&gt;<br>
+&lt;thead&gt;...&lt;/thead&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Multiple aria-current attributes</th>
+<td>
+&lt;a aria-current="page"&gt;Home&lt;/a&gt;<br>
+&lt;a aria-current="page"&gt;Week2&lt;/a&gt;
+</td>
+<td>
+&lt;a aria-current="page"&gt;Week2&lt;/a&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Using div instead of semantic element</th>
+<td>
+&lt;div&gt;Navigation&lt;/div&gt;
+</td>
+<td>
+&lt;nav&gt;Navigation&lt;/nav&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Non-descriptive link text</th>
+<td>
+&lt;a href="week1.html"&gt;Click here&lt;/a&gt;
+</td>
+<td>
+&lt;a href="week1.html"&gt;Week 1: Norman’s Model&lt;/a&gt;
+</td>
+</tr>
+
+<tr>
+<th scope="row">Form without labels</th>
+<td>
+&lt;input type="text"&gt;
+</td>
+<td>
+&lt;label for="name"&gt;Name&lt;/label&gt;<br>
+&lt;input id="name" type="text"&gt;
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</section>
+<a href="../index.html">back to Home</a>
+</main>
+
+<footer>
+<p>Lab Exam Practice – Semantic HTML & Accessibility (Week 01–04)</p>
+</footer>
+
+</body>
+</html>
